@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /*aplique directamente la tipografia a todo el estilo*/
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+$color:(blanchedalmond);
+h1{
+    color:blueviolet; text-align: right;
+}
+/*MENU*/
+.m{
+  color: $color;
+  background-color: black;
+  .menu{
+   background-color: black;
+   
+   .menu__foto{
+     margin-top: 40px;
+     margin-bottom: 40px;
+     }
+     .menu__texto{
+       margin-top: 40px;
+       margin-bottom: 40px;
+       text-align: justify;
+       justify-content: center;
+     }
+  }
+}
+  
+
+
+
+
+
+
+
+/*aca esta contactos*/
+.cuestionario
+{
+  background-color: black;
+  width: 100%;
+
+  .cuestionario__contactos
+  {
+   background-image: linear-gradient( black,rgb(44, 44, 44));
+   color:$color;
+   width: 100%;
+   padding: 12px 20px;
+   margin: 0px 0px;
+   box-sizing: border-box
+   }
+}
+/*termina contactos*/
+/*aca empieza nosotros*/
+.nosotros
+{ 
+ 
+ display: grid;
+ grid-template-columns: 1fr  1fr;
+ grid-template-areas: none;
+ background-color: black;
+ margin-top: 0px;
+   .nosotros__miTexto{ 
+    text-align: justify;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+     h2{
+       color:$color;
+       font-size: 25px;
+      }
+     p {
+       color:$color;
+       font-size: 15px;
+     }
+
+   }
+   .nosotros__imagenN{
+    margin-top: 50px ;
+    margin-left: 20px;
+    margin-bottom: 20px;
+   }
+   
+}
+
+/*aca termina nosotros*/
+
+ 
+
+/*todo el nav*/
+ 
+.nav {
+ width: 100%; 
+ display: flex;
+ align-items: center;
+  .ulIndex {
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    margin-top: 35px;
+    background-color: rgba(0, 0, 0, 0.24);
+    list-style: none;
+    &:hover {
+      transition: height 0.5s;
+      
+      }
+      a{
+        color: $color;
+        text-decoration: none;
+        padding: 10px 12px;
+        display: block;
+        
+      }
+      li{
+        padding: 10px;
+        display: inline-block;
+        &:hover{
+           background-color: rgba(0, 0, 0, 0.637);
+          }
+        
+         &:hover> ul {
+          background-color:rgba(0, 0, 0, 0.24) ;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;       
+          }
+         ul{ 
+          display: none;
+          position: absolute;
+          min-width: 140px;
+          
+
+           li{
+             display:inline-block;
+             text-align: right;
+             &:hover{
+              background-color:rgba(0, 0, 0, 0.637);
+              }
+            }
+         }
+      }
+
+  }
+}
+
+ /* PREGUNTAR (FIJARME SI PUEDO HACER QUE EL .ULINDEX LI UL LI SEA TODO EL BLOQUE OSCURO CUANDO PASO EL CURSOR)
+ aca termina el nav*/
+
+ /*aca empieza ubicacion*/
+ .ubicacion 
+ { 
+  color: $color;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(black,rgb(44, 44, 44));
+  margin-top: 0px;
+  text-align: center;
+  align-items: center;
+   .ubicacion__mapa {
+    margin-bottom: 50px;
+    }
+}
+/*aca termina ubicacion*/
+
+
+ /*aca empieza pedidos*/
+ .contenedorGaleria {
+   width: 100%;
+   height: 90%;
+   display: grid;
+   background-color:black ;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-auto-rows: 1fr 1fr;
+   grid-area: "pz" "p1" "p2" "p3" "p4" "p5";
+   grid-column-gap: 2px;
+   grid-row-gap: 2px;
+   align-content: center;
+   justify-content: center;
+ .contenedorGaleria__img
+ { 
+   text-decoration: none;
+   margin: 30px 30px 30px 50px;
+    a{
+      text-decoration: none;
+     h3{
+      color: $color;
+      text-align: center;
+      background-color:black ;
+      }
+    }
+     &:hover{
+     transform: scale(1.1);
+     }
+     img {
+     width:350px;
+     height: 350px;
+     }
+
+    }
+ }
+ .abrirModal{
+  text-decoration: none;
+  /*background: rgba(48, 48, 48, 0.5);*/
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  align-items: center;
+  display: none;
+
+  .fotoModal{
+    justify-content: center;
+    align-items: center;
+    background-image:url("../imagenes/puntozeroxl.jpg"); /*acordarme de poneer ../ cuando quiero poner una imagen de backgropund*/
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .pedidoModal{
+    top: 2px;
+    background-color:black;
+    color: $color;
+  
+     .far {
+      padding: 11px;
+      text-decoration: none;
+      color: $color;
+      position: absolute;
+      margin-left: 0px;
+      right: 2px;
+      font-size: 25px;
+      cursor: pointer;
+     }
+
+    }  
+}
+ 
+ /*aca termina pedidos*/
+/*imagen comun para todos*/
+
+.imagenB
+{
+  width: 100%;
+  height: 100vh;
+   img
+   { 
+   width: 100%;
+   height: 100%;
+   }
+}
+/*aca termina la imagen comun para todos los html*/
+ 
+
+/*aca el inicio*/
+.carouselOfertas{
+   background-color: black;
+   .carouselOfertas__row { 
+    background-color: black;
+    justify-content: center;
+     img{
+      margin-top: 40px;
+      margin-bottom: 40px; 
+
+      }
+   }
+}
+
+
+/*footer*/
+
+  
+  .footer{
+   color: $color;
+   text-decoration: none;
+   text-align: center;
+   background-color:black ;
+   position:relative;
+   border-top: 2px solid rgb(90, 22, 90);
+   
+   .footer__texto{
+     margin-top: 20px;
+     color: $color;
+     font-size: 20px;
+   }
+   .footer__redes{
+     margin-top: 20px;
+     .fab{
+      a{
+       text-decoration: none;
+       color:$color;
+       font-size: 20px;
+       
+     }
+    }
+   }
+  
+   
+  
+ }
+
+  /*responsive pedidos*/
+ @media screen and (max-width:650px)
+ {
+  .nav .ulIndex 
+  {
+    display:grid;
+    position: relative;
+    background-color: black;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+  } 
+  
+  
+ 
+ 
+ }
+  

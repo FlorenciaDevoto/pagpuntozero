@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/*aplique directamente la tipografia a todo el estilo*/
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-decoration: none; }
+
+h1 {
+  color: blueviolet;
+  text-align: right; }
+
+/*MENU*/
+.m {
+  color: blanchedalmond;
+  background-color: black; }
+  .m .menu {
+    background-color: black; }
+    .m .menu .menu__foto {
+      margin-top: 40px;
+      margin-bottom: 40px; }
+    .m .menu .menu__texto {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      text-align: justify;
+      justify-content: center; }
+
+/*aca esta contactos*/
+.cuestionario {
+  background-color: black;
+  width: 100%; }
+  .cuestionario .cuestionario__contactos {
+    background-image: linear-gradient(black, #2c2c2c);
+    color: blanchedalmond;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 0px;
+    box-sizing: border-box; }
+
+/*termina contactos*/
+/*aca empieza nosotros*/
+.nosotros {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  grid-template-areas: none;
+  background-color: black;
+  margin-top: 0px; }
+  .nosotros .nosotros__miTexto {
+    text-align: justify;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px; }
+    .nosotros .nosotros__miTexto h2 {
+      color: blanchedalmond;
+      font-size: 25px; }
+    .nosotros .nosotros__miTexto p {
+      color: blanchedalmond;
+      font-size: 15px; }
+  .nosotros .nosotros__imagenN {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px; }
+
+/*aca termina nosotros*/
+/*todo el nav*/
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+  .nav .ulIndex {
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    margin-top: 35px;
+    background-color: rgba(0, 0, 0, 0.24);
+    list-style: none; }
+    .nav .ulIndex:hover {
+      transition: height 0.5s; }
+    .nav .ulIndex a {
+      color: blanchedalmond;
+      text-decoration: none;
+      padding: 10px 12px;
+      display: block; }
+    .nav .ulIndex li {
+      padding: 10px;
+      display: inline-block; }
+      .nav .ulIndex li:hover {
+        background-color: rgba(0, 0, 0, 0.637); }
+      .nav .ulIndex li:hover > ul {
+        background-color: rgba(0, 0, 0, 0.24);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+      .nav .ulIndex li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px; }
+        .nav .ulIndex li ul li {
+          display: inline-block;
+          text-align: right; }
+          .nav .ulIndex li ul li:hover {
+            background-color: rgba(0, 0, 0, 0.637); }
+
+/* PREGUNTAR (FIJARME SI PUEDO HACER QUE EL .ULINDEX LI UL LI SEA TODO EL BLOQUE OSCURO CUANDO PASO EL CURSOR)
+ aca termina el nav*/
+/*aca empieza ubicacion*/
+.ubicacion {
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(black, #2c2c2c);
+  margin-top: 0px;
+  text-align: center;
+  align-items: center; }
+  .ubicacion .ubicacion__mapa {
+    margin-bottom: 50px; }
+
+/*aca termina ubicacion*/
+/*aca empieza pedidos*/
+.contenedorGaleria {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  background-color: black;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+  grid-area: "pz" "p1" "p2" "p3" "p4" "p5";
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  align-content: center;
+  justify-content: center; }
+  .contenedorGaleria .contenedorGaleria__img {
+    text-decoration: none;
+    margin: 30px 30px 30px 50px; }
+    .contenedorGaleria .contenedorGaleria__img a {
+      text-decoration: none; }
+      .contenedorGaleria .contenedorGaleria__img a h3 {
+        color: blanchedalmond;
+        text-align: center;
+        background-color: black; }
+    .contenedorGaleria .contenedorGaleria__img:hover {
+      transform: scale(1.1); }
+    .contenedorGaleria .contenedorGaleria__img img {
+      width: 350px;
+      height: 350px; }
+
+.abrirModal {
+  text-decoration: none;
+  /*background: rgba(48, 48, 48, 0.5);*/
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  align-items: center;
+  display: none; }
+  .abrirModal .fotoModal {
+    justify-content: center;
+    align-items: center;
+    background-image: url("../imagenes/puntozeroxl.jpg");
+    /*acordarme de poneer ../ cuando quiero poner una imagen de backgropund*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .abrirModal .pedidoModal {
+    top: 2px;
+    background-color: black;
+    color: blanchedalmond; }
+    .abrirModal .pedidoModal .far {
+      padding: 11px;
+      text-decoration: none;
+      color: blanchedalmond;
+      position: absolute;
+      margin-left: 0px;
+      right: 2px;
+      font-size: 25px;
+      cursor: pointer; }
+
+/*aca termina pedidos*/
+/*imagen comun para todos*/
+.imagenB {
+  width: 100%;
+  height: 100vh; }
+  .imagenB img {
+    width: 100%;
+    height: 100%; }
+
+/*aca termina la imagen comun para todos los html*/
+/*aca el inicio*/
+.carouselOfertas {
+  background-color: black; }
+  .carouselOfertas .carouselOfertas__row {
+    background-color: black;
+    justify-content: center; }
+    .carouselOfertas .carouselOfertas__row img {
+      margin-top: 40px;
+      margin-bottom: 40px; }
+
+/*footer*/
+.footer {
+  color: blanchedalmond;
+  text-decoration: none;
+  text-align: center;
+  background-color: black;
+  position: relative;
+  border-top: 2px solid #5a165a; }
+  .footer .footer__texto {
+    margin-top: 20px;
+    color: blanchedalmond;
+    font-size: 20px; }
+  .footer .footer__redes {
+    margin-top: 20px; }
+    .footer .footer__redes .fab a {
+      text-decoration: none;
+      color: blanchedalmond;
+      font-size: 20px; }
+
+/*responsive pedidos*/
+@media screen and (max-width: 650px) {
+  .nav .ulIndex {
+    display: grid;
+    position: relative;
+    background-color: black;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+    text-align: center; } }

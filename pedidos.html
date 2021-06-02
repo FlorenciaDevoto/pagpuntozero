@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
+    <link  rel="icon"   href="imagenes/logo.jpg.jpeg" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1c19f08348.js" crossorigin="anonymous"></script>
+    <title>Pedidos</title>
+    <meta name="description" content="Punto zero: pedí una riquisima hamburguesa, panchos o papas fritas. Marcos paz.">
+    <meta name="keywords" content="HAMBURGUESAS, PAPAS FRITAS, PANCHOS, PUNTO ZERO, PANCETA, CHEDDAR, MARCOS PAZ, ZONA OESTE">
+</head>
+<body>
+ <header>
+   <nav class="nav">   
+     <ul class="ulIndex">  
+      <li><a href="index.html"> Inicio</a></li>
+      <li><a href="menu.html"> Menu </a>
+      <li><a href="pedidos.html"> Pedidos</a></li>
+      <li><a href="contactos.html"> Contacto </a></li>
+      <li><a href="nosotros.html"> Nosotros</a></li>
+      <li><a href ="ubicacion.html"> Ubicación</a></li>
+     </ul>
+   </nav>
+ </header>
+  
+ <section class="imagenB">
+  <img src="https://s1.1zoom.me/b5050/558/Hamburger_Fast_food_Buns_Closeup_595677_3840x2160.jpg" alt="Imagen fondo">
+ </section>
+
+ <div class="contenedorGaleria" >     
+  <div class= "contenedorGaleria__img"><a href="javascript:abrir()"><img src="imagenes/puntozeroxl.jpg" alt="Punto Zero"><h3>Hamburguesa: Punto zero</h3></a></div>
+  <div class= "contenedorGaleria__img"><a href="javascript:abrir()"><img src="imagenes/fotogoogle.jpg" alt="Punto Uno"><a href="javascript:abrir()"><h3>Hamburguesa: Punto uno</h3></a> </div>
+  <div class= "contenedorGaleria__img"><a href="javascript:abrir()"><img src="imagenes/puntodos1.jpg" alt="Punto Dos"><a href="javascript:abrir()"><h3>Hamburguesa: Punto dos</h3></a></div>
+  <div class= "contenedorGaleria__img"><a href="javascript:abrir()"><img src="imagenes/puntozeroo.jpg" alt="Punto tres"><a href="javascript:abrir()"><h3>Hamburguesa: Punto tres</h3></a></div>
+  <div class= "contenedorGaleria__img"><a href="javascript:abrir()"><img src="imagenes/puntodos.jpg" alt="Punto cuatro"><a href="javascript:abrir()"> <h3>Hamburguesa: Punto cuatro</h3></a> </div>
+  <div class= "contenedorGaleria__img"><a href="javascript:abrir()"><img src= "imagenes/puntotresxl.jpg" alt="Punto Cinco"> <a href="javascript:abrir()"><h3>Hamburguesa: Punto cinco</h3></a></div>
+ </div>  
+
+ <div class="abrirModal container" id="modalpz" >
+   <div class="row">
+    <div class="fotoModal col-md-7">
+    </div>
+    <div class="pedidoModal col-md-5">
+      <div id="cerrarModal"><a href="javascript:cerrar()"><i class="far fa-times-circle"></i> </a></div>
+     <h3>Realiza tu pedido</h3>
+     <h5>Hamburguesa Punto zero</h5>
+     <p>Hamburguesa con cheddar, panceta, barbacoa y cebolla caramelizada.<br>
+        Incluye papas fritas.</p>
+     <form> <p>Podes agregarle:</p>
+      <input type="checkbox" id="panceta" name="panceta" value="panceta">
+      <label for="panceta"> Extra panceta +$30</label><br>
+      <input type="checkbox" id="cheddar" name="cheddar" value="cheddar">
+      <label for="cheddar"> Extra cheddar +$30</label><br>
+      <input type="checkbox" id="carne" name="carne" value="carne">
+      <label for="carne"> Extra medallon(carne) +$120</label> <br><br>
+      <label for="nombre">Nombre y apellido:</label><br>
+      <input type="text" id="nombre" name="nombre" ><br>
+      <label for="direccion">Dirección:</label><br>
+      <input type="text" id="direccion" name="direccion"><br>
+      <label for="retiro"> Retiro en el local</label>
+      <input type="radio" id="local" name="local" value="local"><br>
+      <label for="delivery"> Delivery +$30</label>
+      <input type="radio" id="delivery" name="delivery" value="delivery"><br>
+      <label for="comentarios">comentarios:</label><br>
+      <input type="text" rows="10" cols="40" id="comentarios" name="comentarios" placeholder="Ejemplo: casa de dos pisos con porton verde"> <br>
+      <input type="submit" value="Confirmar pedido"><br><br>
+     </form>
+    </div>
+   </div>
+ </div>
+
+ <footer class="footer row">
+   <div class="linea">
+
+   </div>
+    <div class="footer__texto col-md-6">
+     <p>Todos los derechos reservados</p>
+     <p>Direccion: Sarmiento esq. Belgrano</p>
+     <p>tel: 11xxxxxxx</p>
+    </div>
+    <div class="footer__redes col-md-6">
+     <i class="fab fa-instagram "><a href="https://www.instagram.com/puntozeroo_/?hl=es-la">  @puntozeroo_</a> </i> <br>
+     <br><br>
+     <i class="fab fa-facebook-square"><a href="https://www.facebook.com/puntozeromp/?ref=page_internal">  @puntozeromp</a></i>
+    </div>
+  </div>
+ </footer>
+ <script>
+   function abrir(){
+     document.getElementById("modalpz").style.display="block";
+   } 
+   /*ojo que aca en el id de lo que quiero cerrar no me tengo que confundir. tengo que poner el id de la ventana que quiero cerrar y no del div del icono*/
+   function cerrar(){
+     document.getElementById("modalpz").style.display="none";
+   }
+ </script> 
+ <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

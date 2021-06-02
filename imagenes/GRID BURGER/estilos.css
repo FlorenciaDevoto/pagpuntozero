@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /*aplique directamente la tipografia a todo el estilo*/
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+h1{
+    color:blueviolet; text-align: right;
+}
+
+
+ .logo
+ {
+   color: black;
+   height:150px;
+   width: 200px;
+   
+ }
+  .ubicacion
+  { color: aliceblue;
+    text-align: right;
+    
+
+  }
+  
+
+  
+fieldset
+{
+  color: aliceblue;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  box-sizing: border-box
+}
+.nosotros
+{
+  color: aliceblue;
+  text-align: center;
+}
+ .listaMenu ul
+ {
+   color: white;
+   list-style-type: none;
+   display: flex;
+   text-align:center;
+   background-color: black;
+   position: fixed;
+   left: 10px;
+   width: 100%;
+   padding: 10px;
+   
+ }
+ .listaMenu ul li 
+ { 
+   padding: 10px;
+ }
+ ul,ol 
+ {
+   list-style: none;
+   
+ }
+ .nav {
+   
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+
+ .ulIndex
+ {
+   text-align: right;
+ }
+ .ulIndex > li
+ { 
+   
+   padding: 10px;
+   display: inline-block;
+   
+
+ }
+ .nav li a 
+ {
+   background-color: black;
+   color: blanchedalmond;
+   text-decoration: none;
+   padding: 10px 12px;
+   display: block;
+
+ }
+ .ulIndex li:hover> ul 
+ {
+   background-color: black;
+ }
+ .ulIndex li ul 
+ {
+   display: none;
+   position: absolute;
+   min-width: 140px;
+ }
+ .ulIndex li:hover>ul
+ {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;  
+ }
+ .ulIndex li ul li
+ {
+   position: flex;
+   
+ }
+
+ .bigcontenedor{
+   width: 100%;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+ }
+ .cuestionario
+ {
+   width: 500px;
+  
+   
+   
+ }
+ form 
+ {
+   text-align:justify;
+   
+ }
+ .bigcontenedor {
+   display: grid;
+   background-color:#0606068f ;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-auto-rows: 200px;
+   grid-auto-flow: 150px;
+   
+ }
+ .img {
+ width:100% ;
+ height: 100%;
+ 
+}
+
+
+ }
+
+ /*.contenedor
+ {
+   display: flex;
+   background-color: #0606068f;
+   width: 80%;
+   align-items: center;
+ }
+ .punto{
+   text-align: center;
+ }
+ .punto img
+ {
+   width: 300px;
+   height: 300px;
+   margin: 5px;
+
+ }*/
+ .ubicacion 
+ { display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+   
+ }
+ /*PREGUNTAR XQ ME QUEDA PEGADO EL CONTENEDOR AL FOOTER*/
+
+ footer 
+ { color: blanchedalmond;
+   text-align: center;
+   background-color: black;
+   position:fixed;
+   bottom: 0mm;
+   width: 100%; 
+   font-size:12px ;
+   
+ }
+ 
+  
+/* ASI SE PONE COMENTARIO EN CSS
+
+de la practicaa*/
+/* lo rrecomendable es ponerlo en este orden*/
+
+
+body {
+  background-image: url(https://wallpapercave.com/wp/wp4056193.jpg);
+  background-position-x: 50%;
+  background-position-y: 60%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+  
+
+/*.practica { 
+  color:#0033ff; 
+  letter-spacing: 1px;}
+.parrafo {
+   color:blanchedalmond;
+   line-height: 15px;font-size: 12px;}
+.logo{
+  border-radius: 50%;
+  margin: 25px;
+}*/
+
+
+
+/* ACA EMPIEZA GRID */
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:"contenido contenido contenido contenido sidebar"
+						"foto-1 foto-2 foto-3 foto-4 sidebar"
+
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .detalle {
+	background: #fff;
+	padding: 20px;
+
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+}
+
+.contenedor .detalle {
+	grid-column: 3 / 4;
+	background: #ffffff;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+.contenedor .foto-1,
+.contenedor .foto-3,
+.contenedor .foto-2,
+.contenedor .foto-4 {
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .foto-1 {
+	grid-area: foto-1;
+}
+
+.contenedor .foto-2 {
+	grid-area: foto-2;
+}
+
+.contenedor .foto-3 {
+	grid-area: foto-3;
+}
+
+.contenedor .foto-4 {
+	grid-area: foto-4;
+}
+
+.detalleproducto {
+	text-align: left;
+	margin-left: 30px;
+}
+
