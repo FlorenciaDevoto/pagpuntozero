@@ -191,6 +191,35 @@ h1 {
 
 /*aca termina la imagen comun para todos los html*/
 /*aca el inicio*/
+.menu {
+  background-color: black;
+  bottom: 0px;
+  top: 0px; }
+  .menu .menu__delivery .deliveryFoto {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 20%; }
+  .menu .menu__delivery h3 {
+    margin-top: 60px;
+    text-align: center;
+    color: blanchedalmond;
+    font-family: "raleway", sans-serif;
+    font-size: 25px; }
+  .menu .menu__delivery p {
+    text-align: center;
+    color: blanchedalmond;
+    font-family: "raleway", sans-serif; }
+  .menu .menu__delivery a {
+    text-decoration: none; }
+    .menu .menu__delivery a h2 {
+      font-family: "ultra", serif;
+      font-size: 30px;
+      color: blanchedalmond;
+      text-align: center;
+      text-decoration: none;
+      bottom: 60px; }
+
 .carouselOfertas {
   background-color: black; }
   .carouselOfertas .carouselOfertas__row {
