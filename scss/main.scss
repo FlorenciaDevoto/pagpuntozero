@@ -14,6 +14,9 @@ h1{
    
     
 }
+body{
+  overflow-x: hidden;
+}
 /*MENU*/
 .m{
   color: $color;
@@ -95,63 +98,84 @@ h1{
  
 
 /*todo el nav*/
-
-.nav {
- width: 100%; 
- display: flex;
- align-items: center;
-  .ulIndex {
-    width: 100%;
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  
+  /*label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px; 
+      &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.737);
+      }
+    }*/
+  .menu-nav{
     text-align: right;
-    position: fixed;
-    margin-top: 35px;
-    background-color: rgba(0, 0, 0, 0.24);
+   ul {
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    &:hover {
-      transition: height 0.5s;
+    display: flex;
+    
+    /*al ser display flex hace que por defecto los li que esten dentro sean una caja flexible y por defecto coloque en fila*/ }
+     li {
+       &:hover{
+         background-color: rgba(0, 0, 0, 0.737);
+       }
+       a {
+      display: block;
+      padding: 15px 20px;
+      text-align: right;
+      color: blanchedalmond;
+      text-decoration: none; 
+       &:hover {
+        background-color: rgba(0, 0, 0, 0.737);
+       }
+      }
+      }
+     }
+     
+    }
+  
+    /*.btn-menu{
+      display: none;
+    }
+    /*NO LO SOLUCIONE
+  @media (max-width:768){
+    header{
+     label{
+      display:block ;
+     }
+     
+     
+     .menu-nav{
+       position: absolute;
+       background-color: rgba(0, 0, 0, 0.24);
+       width: 80%;
+       margin-left: -80%;
+       transition: all 0.5s;
+       ul{
+       /*por defecto antes era row (fila) pero ahora quiero que sea columna*/
+       /*flex-direction: column;
+       }
+      }
+      #btn-menu:checked ~ * .menu-nav{
+        margin: 0;
+        
+      }
       
-      }
-      a{
-        color: $color;
-        text-decoration: none;
-        padding: 10px 12px;
-        display: block;
-        
-      }
-      li{
-        padding: 10px;
-        display: inline-block;
-        &:hover{
-           background-color: rgba(0, 0, 0, 0.637);
-          }
-        
-         &:hover> ul {
-          background-color:rgba(0, 0, 0, 0.24) ;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;       
-          }
-         ul{ 
-          display: none;
-          position: absolute;
-          min-width: 140px;
-          
-
-           li{
-             display:inline-block;
-             text-align: right;
-             &:hover{
-              background-color:rgba(0, 0, 0, 0.637);
-              }
-            }
-         }
+    
       }
 
-  }
-}
+     }*/
+    
 
- /* PREGUNTAR (FIJARME SI PUEDO HACER QUE EL .ULINDEX LI UL LI SEA TODO EL BLOQUE OSCURO CUANDO PASO EL CURSOR)
- aca termina el nav*/
+ 
 
  /*aca empieza ubicacion*/
  .ubicacion 
@@ -254,12 +278,10 @@ h1{
 .imagenB
 {
   width: 100%;
-  height: 100vh;
-   img
-   { 
-   width: 100%;
-   height: 100%;
-   }
+  height: 100%;
+  img{
+    width: 100%;
+  }
 }
 /*aca termina la imagen comun para todos los html*/
  
@@ -328,7 +350,7 @@ h1{
    text-align: center;
    background-color:black ;
    position:relative;
-   border-top: 2px solid rgb(90, 22, 90);
+   
    
    .footer__texto{
      margin-top: 20px;
@@ -346,27 +368,16 @@ h1{
      }
     }
    }
+  }
+
   
-   
-  
- }
+
 
   /*responsive pedidos*/
- @media screen and (max-width:650px)
- {
-  .nav .ulIndex 
-  {
-    display:grid;
-    position: relative;
-    background-color: black;
-    justify-content: center;
-    margin-top: 0px;
-    width: 100%;
-    text-align: center;
-  } 
-  
+
   
  
  
- }
+ 
+ 
   

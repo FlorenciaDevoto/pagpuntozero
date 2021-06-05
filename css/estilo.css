@@ -11,6 +11,9 @@ h1 {
   color: blueviolet;
   text-align: right; }
 
+body {
+  overflow-x: hidden; }
+
 /*MENU*/
 .m {
   color: blanchedalmond;
@@ -64,46 +67,71 @@ h1 {
 
 /*aca termina nosotros*/
 /*todo el nav*/
-.nav {
+header {
+  position: fixed;
   width: 100%;
-  display: flex;
-  align-items: center; }
-  .nav .ulIndex {
-    width: 100%;
-    text-align: right;
-    position: fixed;
-    margin-top: 35px;
-    background-color: rgba(0, 0, 0, 0.24);
-    list-style: none; }
-    .nav .ulIndex:hover {
-      transition: height 0.5s; }
-    .nav .ulIndex a {
+  background-color: rgba(0, 0, 0, 0.24);
+  /*label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px; 
+      &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.737);
+      }
+    }*/ }
+  header .menu-nav {
+    text-align: right; }
+    header .menu-nav ul {
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      /*al ser display flex hace que por defecto los li que esten dentro sean una caja flexible y por defecto coloque en fila*/ }
+    header .menu-nav li:hover {
+      background-color: rgba(0, 0, 0, 0.737); }
+    header .menu-nav li a {
+      display: block;
+      padding: 15px 20px;
+      text-align: right;
       color: blanchedalmond;
-      text-decoration: none;
-      padding: 10px 12px;
-      display: block; }
-    .nav .ulIndex li {
-      padding: 10px;
-      display: inline-block; }
-      .nav .ulIndex li:hover {
-        background-color: rgba(0, 0, 0, 0.637); }
-      .nav .ulIndex li:hover > ul {
-        background-color: rgba(0, 0, 0, 0.24);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; }
-      .nav .ulIndex li ul {
-        display: none;
-        position: absolute;
-        min-width: 140px; }
-        .nav .ulIndex li ul li {
-          display: inline-block;
-          text-align: right; }
-          .nav .ulIndex li ul li:hover {
-            background-color: rgba(0, 0, 0, 0.637); }
+      text-decoration: none; }
+      header .menu-nav li a:hover {
+        background-color: rgba(0, 0, 0, 0.737); }
 
-/* PREGUNTAR (FIJARME SI PUEDO HACER QUE EL .ULINDEX LI UL LI SEA TODO EL BLOQUE OSCURO CUANDO PASO EL CURSOR)
- aca termina el nav*/
+/*.btn-menu{
+      display: none;
+    }
+    /*NO LO SOLUCIONE
+  @media (max-width:768){
+    header{
+     label{
+      display:block ;
+     }
+     
+     
+     .menu-nav{
+       position: absolute;
+       background-color: rgba(0, 0, 0, 0.24);
+       width: 80%;
+       margin-left: -80%;
+       transition: all 0.5s;
+       ul{
+       /*por defecto antes era row (fila) pero ahora quiero que sea columna*/
+/*flex-direction: column;
+       }
+      }
+      #btn-menu:checked ~ * .menu-nav{
+        margin: 0;
+        
+      }
+      
+    
+      }
+
+     }*/
 /*aca empieza ubicacion*/
 .ubicacion {
   color: blanchedalmond;
@@ -184,10 +212,9 @@ h1 {
 /*imagen comun para todos*/
 .imagenB {
   width: 100%;
-  height: 100vh; }
+  height: 100%; }
   .imagenB img {
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
 
 /*aca termina la imagen comun para todos los html*/
 /*aca el inicio*/
@@ -235,8 +262,7 @@ h1 {
   text-decoration: none;
   text-align: center;
   background-color: black;
-  position: relative;
-  border-top: 2px solid #5a165a; }
+  position: relative; }
   .footer .footer__texto {
     margin-top: 20px;
     color: blanchedalmond;
@@ -249,12 +275,3 @@ h1 {
       font-size: 20px; }
 
 /*responsive pedidos*/
-@media screen and (max-width: 650px) {
-  .nav .ulIndex {
-    display: grid;
-    position: relative;
-    background-color: black;
-    justify-content: center;
-    margin-top: 0px;
-    width: 100%;
-    text-align: center; } }
