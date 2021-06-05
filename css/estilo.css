@@ -66,72 +66,109 @@ body {
     margin-bottom: 20px; }
 
 /*aca termina nosotros*/
-/*todo el nav*/
-header {
-  position: fixed;
-  width: 100%;
+/*NAV*/
+.menu-toggle .barra-home {
+  color: rgba(0, 0, 0, 0.24); }
+
+.menu-toggle .barra {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 3rem;
+  top: 2rem;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1;
+  color: blanchedalmond; }
+
+.overlay {
+  position: absolute;
+  width: 0;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.24);
-  /*label{
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px; 
-      &:hover {
-      cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.737);
-      }
-    }*/ }
-  header .menu-nav {
-    text-align: right; }
-    header .menu-nav ul {
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+  z-index: 990;
+  opacity: 1;
+  transition: opacity .5s, transform .5s;
+  transform: translateX(0); }
+
+.menu-nav {
+  background-color: rgba(0, 0, 0, 0.24);
+  width: 30rem;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  transform: translateX(-30rem);
+  transition: .5s;
+  z-index: 1000; }
+  .menu-nav ul {
+    color: blanchedalmond;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase; }
+  .menu-nav li:hover {
+    background-color: rgba(0, 0, 0, 0.737); }
+  .menu-nav a {
+    color: blanchedalmond;
+    text-decoration: none; }
+    .menu-nav a:hover {
+      color: blanchedalmond; }
+  .menu-nav .close {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    cursor: pointer; }
+    .menu-nav .close i {
+      color: blanchedalmond; }
+
+.fixed-position {
+  overflow-y: hidden; }
+
+.active {
+  transform: translateX(0); }
+
+.menu-open {
+  width: 100%;
+  opacity: 1; }
+
+@media (min-width: 768px) {
+  .menu-nav {
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 100%;
+    height: auto;
+    transform: translateX(0);
+    transition: transform 0s;
+    position: fixed;
+    display: flex; }
+    .menu-nav .close {
+      display: none; }
+    .menu-nav ul {
       display: flex;
-      /*al ser display flex hace que por defecto los li que esten dentro sean una caja flexible y por defecto coloque en fila*/ }
-    header .menu-nav li:hover {
-      background-color: rgba(0, 0, 0, 0.737); }
-    header .menu-nav li a {
-      display: block;
-      padding: 15px 20px;
-      text-align: right;
-      color: blanchedalmond;
-      text-decoration: none; }
-      header .menu-nav li a:hover {
+      justify-content: flex-end;
+      text-align: center;
+      list-style: none;
+      cursor: pointer;
+      margin: 0; }
+    .menu-nav li {
+      padding: 14px; }
+      .menu-nav li:hover {
         background-color: rgba(0, 0, 0, 0.737); }
+      .menu-nav li a:hover {
+        color: #fce2ba; } }
 
-/*.btn-menu{
-      display: none;
-    }
-    /*NO LO SOLUCIONE
-  @media (max-width:768){
-    header{
-     label{
-      display:block ;
-     }
-     
-     
-     .menu-nav{
-       position: absolute;
-       background-color: rgba(0, 0, 0, 0.24);
-       width: 80%;
-       margin-left: -80%;
-       transition: all 0.5s;
-       ul{
-       /*por defecto antes era row (fila) pero ahora quiero que sea columna*/
-/*flex-direction: column;
-       }
-      }
-      #btn-menu:checked ~ * .menu-nav{
-        margin: 0;
-        
-      }
-      
-    
-      }
+.menu-toggle {
+  display: none; }
+  .menu-toggle .bars {
+    display: none; }
 
-     }*/
+.active {
+  display: none; }
+
+/*todo el nav*/
 /*aca empieza ubicacion*/
 .ubicacion {
   color: blanchedalmond;

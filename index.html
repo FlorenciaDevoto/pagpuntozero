@@ -23,7 +23,17 @@
  <header>
    <!---<input type="checkbox" id="btn-menu">
    <label for="btn-menu"><img src="imagenes/lista.png" alt="icono-menu"></label>-->
+   <div class="menu-toggle">
+     <div class="barra-home barra">
+       <i class="fas fa-bars"></i>
+     </div>
+   </div>
+   <div class="overlay"></div>
+   
    <nav class="menu-nav">
+     <div class="close">
+       <i class="far fa-times"></i>
+     </div>
      <ul>
       <li><a href="index.html">Inicio</a></li>  
       <li><a href="menu.html">Menu</a></li>    
@@ -139,6 +149,27 @@
     
    
 <script src="js/bootstrap.bundle.min.js">
+  
+</script>
+<script>
+  let menuToggler = document.querySelector('.fa-bars');
+let menuClose = document.querySelector('.close');
+let nav = document.querySelector('.menu-nav');
+let body = document.querySelector('body');
+let over = document.querySelector('.overlay');
+
+menuToggler.addEventListener('click', function() {
+    console.log("aaaa");
+    nav.classList.toggle('active');
+    body.classList.toggle('fixed-position');
+    over.classList.toggle('menu-open')
+});
+
+menuClose.addEventListener("click", () => {
+    nav.classList.remove('active');
+    body.classList.remove('fixed-position');
+    over.classList.remove('menu-open')
+})
 </script>
 
 </body>
