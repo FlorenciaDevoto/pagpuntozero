@@ -21,8 +21,7 @@
 </head>
 <body >
  <header>
-   <!---<input type="checkbox" id="btn-menu">
-   <label for="btn-menu"><img src="imagenes/lista.png" alt="icono-menu"></label>-->
+  
    <div class="menu-toggle">
      <div class="barra-home barra">
        <i class="fas fa-bars"></i>
@@ -44,20 +43,7 @@
      </ul>  
 
    </nav>
-   <!--
-    <nav class="nav">
-        
-        <ul class="ulIndex">  
-            <li><a href="index.html"> Inicio</a></li>
-            <li><a href="menu.html"> Menu </a>
-            <li><a href="pedidos.html"> Pedidos</a></li>
-            <li><a href="contactos.html"> Contacto </a></li>
-            <li><a href="nosotros.html"> Nosotros</a></li>
-            <li><a href ="ubicacion.html"> Ubicación</a></li>
-        </ul>
-
-    </nav>
-  -->
+   
     
  </header> 
  <section class="imagenB">
@@ -154,12 +140,11 @@
 <script>
   let menuToggler = document.querySelector('.fa-bars');
 let menuClose = document.querySelector('.close');
-let nav = document.querySelector('.menu-nav');
+let nav = document.querySelector('.navegacion');
 let body = document.querySelector('body');
 let over = document.querySelector('.overlay');
 
 menuToggler.addEventListener('click', function() {
-    console.log("aaaa");
     nav.classList.toggle('active');
     body.classList.toggle('fixed-position');
     over.classList.toggle('menu-open')

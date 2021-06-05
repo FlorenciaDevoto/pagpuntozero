@@ -16,7 +16,7 @@ body {
 
 /*MENU*/
 .m {
-  color: blanchedalmond;
+  color: #f2e4f2;
   background-color: black; }
   .m .menu {
     background-color: black; }
@@ -29,20 +29,32 @@ body {
       text-align: justify;
       justify-content: center; }
 
-/*aca esta contactos*/
-.cuestionario {
-  background-color: black;
-  width: 100%; }
-  .cuestionario .cuestionario__contactos {
-    background-image: linear-gradient(black, #2c2c2c);
-    color: blanchedalmond;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 0px 0px;
-    box-sizing: border-box; }
-
-/*termina contactos*/
 /*aca empieza nosotros*/
+.social-box {
+  background-color: black; }
+  .social-box .box {
+    top: 60px;
+    bottom: 60px;
+    background-color: #f2e4f2;
+    border-radius: 10px;
+    padding: 40px 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease-out; }
+    .social-box .box:hover {
+      box-shadow: 0 0 6px #f2e4f2; }
+    .social-box .box .box-text {
+      margin: 20px 0px;
+      font-size: 15px;
+      line-height: 30px; }
+    .social-box .box .box-btn a {
+      text-decoration: none;
+      color: #b576ad;
+      font-size: 16px; }
+
+.fa {
+  color: #b576ad; }
+
 .nosotros {
   display: grid;
   grid-template-columns: 1fr  1fr;
@@ -55,10 +67,10 @@ body {
     margin-top: 50px;
     margin-bottom: 20px; }
     .nosotros .nosotros__miTexto h2 {
-      color: blanchedalmond;
+      color: #f2e4f2;
       font-size: 25px; }
     .nosotros .nosotros__miTexto p {
-      color: blanchedalmond;
+      color: #f2e4f2;
       font-size: 15px; }
   .nosotros .nosotros__imagenN {
     margin-top: 50px;
@@ -67,6 +79,11 @@ body {
 
 /*aca termina nosotros*/
 /*NAV*/
+body {
+  font-size: 1.6rem;
+  line-height: 2;
+  min-height: 100%; }
+
 .menu-toggle .barra-home {
   color: rgba(0, 0, 0, 0.24); }
 
@@ -80,7 +97,7 @@ body {
   bottom: 0;
   cursor: pointer;
   z-index: 1;
-  color: blanchedalmond; }
+  color: #f2e4f2; }
 
 .overlay {
   position: absolute;
@@ -102,10 +119,10 @@ body {
   text-align: center;
   justify-content: center;
   transform: translateX(-30rem);
-  transition: .5s;
+  transition: transform .5s;
   z-index: 1000; }
   .menu-nav ul {
-    color: blanchedalmond;
+    color: #f2e4f2;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -113,17 +130,24 @@ body {
   .menu-nav li:hover {
     background-color: rgba(0, 0, 0, 0.737); }
   .menu-nav a {
-    color: blanchedalmond;
+    color: #f2e4f2;
     text-decoration: none; }
     .menu-nav a:hover {
-      color: blanchedalmond; }
+      color: #f2e4f2; }
   .menu-nav .close {
     position: absolute;
     top: 2rem;
     left: 3rem;
     cursor: pointer; }
     .menu-nav .close i {
-      color: blanchedalmond; }
+      color: #f2e4f2; }
+  .menu-nav .fixed-position {
+    overflow-y: hidden; }
+  .menu-nav .active {
+    transform: translateX(0); }
+  .menu-nav .menu-open {
+    width: 100%;
+    opacity: 1; }
 
 .fixed-position {
   overflow-y: hidden; }
@@ -171,7 +195,7 @@ body {
 /*todo el nav*/
 /*aca empieza ubicacion*/
 .ubicacion {
-  color: blanchedalmond;
+  color: #f2e4f2;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(black, #2c2c2c);
@@ -201,7 +225,7 @@ body {
     .contenedorGaleria .contenedorGaleria__img a {
       text-decoration: none; }
       .contenedorGaleria .contenedorGaleria__img a h3 {
-        color: blanchedalmond;
+        color: #f2e4f2;
         text-align: center;
         background-color: black; }
     .contenedorGaleria .contenedorGaleria__img:hover {
@@ -234,11 +258,11 @@ body {
   .abrirModal .pedidoModal {
     top: 2px;
     background-color: black;
-    color: blanchedalmond; }
+    color: #f2e4f2; }
     .abrirModal .pedidoModal .far {
       padding: 11px;
       text-decoration: none;
-      color: blanchedalmond;
+      color: #f2e4f2;
       position: absolute;
       margin-left: 0px;
       right: 2px;
@@ -267,19 +291,19 @@ body {
   .menu .menu__delivery h3 {
     margin-top: 60px;
     text-align: center;
-    color: blanchedalmond;
+    color: #f2e4f2;
     font-family: "raleway", sans-serif;
     font-size: 25px; }
   .menu .menu__delivery p {
     text-align: center;
-    color: blanchedalmond;
+    color: #f2e4f2;
     font-family: "raleway", sans-serif; }
   .menu .menu__delivery a {
     text-decoration: none; }
     .menu .menu__delivery a h2 {
       font-family: "ultra", serif;
       font-size: 30px;
-      color: blanchedalmond;
+      color: #f2e4f2;
       text-align: center;
       text-decoration: none;
       bottom: 60px; }
@@ -295,20 +319,20 @@ body {
 
 /*footer*/
 .footer {
-  color: blanchedalmond;
+  color: #f2e4f2;
   text-decoration: none;
   text-align: center;
   background-color: black;
   position: relative; }
   .footer .footer__texto {
     margin-top: 20px;
-    color: blanchedalmond;
+    color: #f2e4f2;
     font-size: 20px; }
   .footer .footer__redes {
     margin-top: 20px; }
     .footer .footer__redes .fab a {
       text-decoration: none;
-      color: blanchedalmond;
+      color: #f2e4f2;
       font-size: 20px; }
 
 /*responsive pedidos*/
