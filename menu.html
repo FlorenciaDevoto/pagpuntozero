@@ -18,25 +18,25 @@
    
     <div class="menu-toggle">
         <div class="barra-home barra">
-          <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
+            
         </div>
-      </div>
-      <div class="overlay"></div>
-      
-      <nav class="menu-nav">
-        <div class="close">
-          <i class="far fa-times"></i>
-        </div>
-        <ul>
-         <li><a href="index.html">Inicio</a></li>  
-         <li><a href="menu.html">Menu</a></li>    
-         <li><a href="pedidos.html">Pedidos</a></li>
-         <li><a href="contactos.html">Contacto</a></li>
-         <li><a href="nosotros.html">Nosotros</a></li>
-         <li><a href="ubicacion.html">Ubicación</a></li> 
-        </ul>  
-   
-      </nav>
+    </div>
+    <div class="overlay"></div>
+        <nav class="nav-menu">
+            <div class="close">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>  
+              <li><a href="menu.html">Menu</a></li>    
+              <li><a href="pedidos.html">Pedidos</a></li>
+              <li><a href="contactos.html">Contacto</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="ubicacion.html">Ubicación</a></li> 
+    
+            </ul>
+        </nav>
  </header> 
  <section class="imagenB">
     <img src="https://s1.1zoom.me/b5050/558/Hamburger_Fast_food_Buns_Closeup_595677_3840x2160.jpg" alt="foto fondo">
@@ -130,12 +130,11 @@
    <script>
     let menuToggler = document.querySelector('.fa-bars');
   let menuClose = document.querySelector('.close');
-  let nav = document.querySelector('.menu-nav');
+  let nav = document.querySelector('.nav-menu');
   let body = document.querySelector('body');
   let over = document.querySelector('.overlay');
   
   menuToggler.addEventListener('click', function() {
-      console.log("aaaa");
       nav.classList.toggle('active');
       body.classList.toggle('fixed-position');
       over.classList.toggle('menu-open')

@@ -16,28 +16,27 @@
 </head>
 <body>
     <header>
-        <div class="menu-toggle">
-            <div class="barra-home barra">
-              <i class="fas fa-bars"></i>
-            </div>
-          </div>
-          <div class="overlay"></div>
-          
-          <nav class="menu-nav">
+      <div class="menu-toggle">
+        <div class="barra-home barra">
+            <i class="fas fa-bars"></i>
+            
+        </div>
+    </div>
+    <div class="overlay"></div>
+        <nav class="nav-menu">
             <div class="close">
-              <i class="far fa-times"></i>
+                <i class="fas fa-times"></i>
             </div>
             <ul>
-             <li><a href="index.html">Inicio</a></li>  
-             <li><a href="menu.html">Menu</a></li>    
-             <li><a href="pedidos.html">Pedidos</a></li>
-             <li><a href="contactos.html">Contacto</a></li>
-             <li><a href="nosotros.html">Nosotros</a></li>
-             <li><a href="ubicacion.html">Ubicación</a></li> 
-            </ul>  
-       
-          </nav>
+              <li><a href="index.html">Inicio</a></li>  
+              <li><a href="menu.html">Menu</a></li>    
+              <li><a href="pedidos.html">Pedidos</a></li>
+              <li><a href="contactos.html">Contacto</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="ubicacion.html">Ubicación</a></li> 
     
+            </ul>
+        </nav>
     
     </header>
     <section class="imagenB">
@@ -77,25 +76,23 @@
 </script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script>
-    let menuToggler = document.querySelector('.fa-bars');
-  let menuClose = document.querySelector('.close');
-  let nav = document.querySelector('.menu-nav');
-  let body = document.querySelector('body');
-  let over = document.querySelector('.overlay');
-  
-  menuToggler.addEventListener('click', function() {
-      console.log("aaaa");
-      nav.classList.toggle('active');
-      body.classList.toggle('fixed-position');
-      over.classList.toggle('menu-open')
-  });
-  
-  menuClose.addEventListener("click", () => {
-      nav.classList.remove('active');
-      body.classList.remove('fixed-position');
-      over.classList.remove('menu-open')
-  })
-  </script>
+  let menuToggler = document.querySelector('.fa-bars');
+let menuClose = document.querySelector('.close');
+let nav = document.querySelector('.nav-menu');
+let body = document.querySelector('body');
+let over = document.querySelector('.overlay');
 
+menuToggler.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    body.classList.toggle('fixed-position');
+    over.classList.toggle('menu-open')
+});
+
+menuClose.addEventListener("click", () => {
+    nav.classList.remove('active');
+    body.classList.remove('fixed-position');
+    over.classList.remove('menu-open')
+})
+</script>
 </body>
 </html>
