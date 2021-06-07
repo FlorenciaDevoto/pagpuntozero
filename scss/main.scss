@@ -19,8 +19,10 @@ body{
 }
 /*MENU*/
 .m{
-  color: $color;
+  width: 100%;
+  height: 100%;
   background-color: black;
+  color: $color;
   .menu{
    background-color: black;
    
@@ -29,6 +31,7 @@ body{
      margin-bottom: 40px;
      }
      .menu__texto{
+       color:$color;
        margin-top: 40px;
        margin-bottom: 40px;
        text-align: justify;
@@ -95,6 +98,7 @@ body{
  margin-top: 0px;
    .nosotros__miTexto{ 
     text-align: justify;
+    padding: 10px;
     margin-left: 20px;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -112,8 +116,18 @@ body{
     margin-top: 50px ;
     margin-left: 20px;
     margin-bottom: 20px;
+    img{
+      width: 100%;
+      padding: 10px;
+    }
    }
    
+}
+@media (max-width: 768px ){
+  .nosotros{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 /*aca termina nosotros*/
@@ -271,13 +285,14 @@ body{
  .ubicacion 
  { 
   color: $color;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   background-image: linear-gradient(black,rgb(44, 44, 44));
   margin-top: 0px;
   text-align: center;
   align-items: center;
    .ubicacion__mapa {
+     width: auto;
     margin-bottom: 50px;
     }
 }
@@ -286,41 +301,117 @@ body{
 
  /*aca empieza pedidos*/
  
- 
- .contenedorGaleria {
-   width: 100%;
-   height: 90%;
-   display: grid;
-   background-color:black ;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-auto-rows: 1fr 1fr;
-   grid-area: "pz" "p1" "p2" "p3" "p4" "p5";
-   grid-column-gap: 2px;
-   grid-row-gap: 2px;
-   align-content: center;
-   justify-content: center;
- .contenedorGaleria__img
- { 
-   text-decoration: none;
-   margin: 30px 30px 30px 50px;
-    a{
-      text-decoration: none;
-     h3{
-      color: $color;
-      text-align: center;
-      background-color:black ;
+
+
+ @mixin flex ($dir: row, $wrap: wrap, $ai: center, $jc: center, $ac: center){
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  align-items: $ai;
+  justify-content: $jc;
+  align-content: $ac;
+}
+@mixin imagen ($url: '', $size: cover, $posicion: center, $repeat: no-repeat) {
+  @if  $url != '' {
+    background-image: url($url);
+  }
+  background-size: $size;
+  background-position: $posicion;
+  background-repeat: $repeat;
+  
+}
+
+
+.contenedorCards{
+  @include flex;
+  min-height: 100vh;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background-color: black;
+  .card{
+    width: 300px;
+    transition: ease all .3s;
+    background-color: white;
+    .wrapper{
+      margin: 60px 10px 10px 10px;
+      padding-top: 300px;
+      box-sizing: border-box;
+      position: relative;
+      box-shadow: 0 0 20px 10px rgba(black,.1);
+      transition: ease all .3s;
+      &:hover{
+        transform: translateY(-10px);
+        .imgProd{
+          height: 350px;
+          img{
+            width: 278px;
+            height: 300px;
+          }
+        }
+      }
+      
+      .imgProd{
+        @include imagen('', contain, center bottom);
+        position: absolute;
+        bottom: calc(100% - 300px);
+        width: 100%;
+        height: 300px;
+        transition: ease all .3s;
+        img{
+          width: 278px;
+          height: 300px;
+        }
+      }
+      .infoProd{
+        @include flex(column, nowrap);
+        height: 170px;
+        padding: 20px;
+        box-sizing: border-box;
+        p{
+          width: 100%;
+          font-size: 14px;
+          text-align: center;
+        }
+        .nombreProd{
+          font-family: "Roboto",sans-serif;
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          
+          
+        }
+        .extraInfo{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .actions{
+          @include flex($jc: space-between);
+          width: 100%;
+          margin-top: auto;
+          padding-top: 10px;
+          .preciosGrupo{
+            flex-grow: 1;
+            position: relative;
+            .precio{
+              font-family: "Roboto",sans-serif;
+              color: black;
+              font-size: 25px;
+              font-weight: 600;
+              text-align: left;
+              }
+            }
+            .icono{
+              margin-bottom: 25px;
+              
+            }
+          }
+          
+         }
+        }
       }
     }
-     &:hover{
-     transform: scale(1.1);
-     }
-     img {
-     width:350px;
-     height: 350px;
-     }
-
-    }
- }
+  
  .abrirModal{
   text-decoration: none;
   /*background: rgba(48, 48, 48, 0.5);*/
@@ -417,31 +508,21 @@ body{
    
   }
 }
-.carouselOfertas{
+.carousel{
    background-color: black;
-   .carouselOfertas__row { 
-    background-color: black;
-    justify-content: center;
-     img{
-      margin-top: 40px;
-      margin-bottom: 40px; 
-
-      }
-   }
+  padding: 10px;
+  margin-bottom: 0px;
 }
 
 
 /*footer*/
-
-  
-  .footer{
-   color: $color;
-   text-decoration: none;
-   text-align: center;
-   background-color:black ;
-   position:relative;
-   
-   
+   footer{
+     
+   .contenido__footer{
+    color: $color;
+    text-decoration: none;
+    text-align: center;
+    background-color:black ;
    .footer__texto{
      margin-top: 20px;
      color: $color;
@@ -459,6 +540,7 @@ body{
     }
    }
   }
+   }
 
   
 
