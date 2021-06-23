@@ -135,8 +135,8 @@ body{
 /*NAV*/
 
 .nav-menu {
-  background-color:rgba(0, 0, 0, 0.24);
-  width: 30rem;
+  background-color:black;
+  width:100%;
   height: 100vh;
   position: fixed;
   display: flex;
@@ -311,10 +311,7 @@ body{
   justify-content: $jc;
   align-content: $ac;
 }
-@mixin imagen ($url: '', $size: cover, $posicion: center, $repeat: no-repeat) {
-  @if  $url != '' {
-    background-image: url($url);
-  }
+@mixin imagen ($size: cover, $posicion: center, $repeat: no-repeat) {
   background-size: $size;
   background-position: $posicion;
   background-repeat: $repeat;
@@ -331,9 +328,12 @@ body{
   .card{
     width: 300px;
     transition: ease all .3s;
-    background-color: white;
+    background-color: black;
+    margin: 20px 5px;
+    border-radius: 10px;
+    border-color: rgb(26, 25, 25);
     .wrapper{
-      margin: 60px 10px 10px 10px;
+      margin: 20px 10px 10px 10px;
       padding-top: 300px;
       box-sizing: border-box;
       position: relative;
@@ -367,6 +367,7 @@ body{
         height: 170px;
         padding: 20px;
         box-sizing: border-box;
+        color: $color;
         p{
           width: 100%;
           font-size: 14px;
@@ -374,6 +375,7 @@ body{
         }
         .nombreProd{
           font-family: "Roboto",sans-serif;
+          color: $color;
           margin-bottom: 10px;
           font-size: 16px;
           font-weight: 600;
@@ -395,7 +397,7 @@ body{
             position: relative;
             .precio{
               font-family: "Roboto",sans-serif;
-              color: black;
+              color: $color;
               font-size: 25px;
               font-weight: 600;
               text-align: left;
@@ -403,6 +405,15 @@ body{
             }
             .icono{
               margin-bottom: 25px;
+              a{
+                .fas{
+                  color:$color;
+                  &:hover{
+                    color: rgb(250, 214, 160);
+                  }
+
+                }
+              }
               
             }
           }
@@ -526,7 +537,7 @@ body{
    .footer__texto{
      margin-top: 20px;
      color: $color;
-     font-size: 20px;
+     font-size: 15px;
    }
    .footer__redes{
      margin-top: 20px;
@@ -534,12 +545,27 @@ body{
       a{
        text-decoration: none;
        color:$color;
-       font-size: 20px;
+       font-size: 15px;
        
      }
     }
    }
   }
+   }
+   @media (max-width: 768px ) {
+     footer{
+       overflow-x: hidden;
+       .contenido__footer{
+         font-size: 13px;
+         .footer__texto{
+           font-size: 13px;
+         }
+         .footer__redes{
+           font-size: 13px;
+         }
+       }
+     }
+     
    }
 
   
