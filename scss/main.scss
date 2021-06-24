@@ -55,7 +55,7 @@ body{
   .box{
     top: 60px;
     bottom: 60px;
-    background-color: rgb(242, 228, 242);
+    background: linear-gradient(78deg, #191415, #610f64);
     border-radius: 10px;
     padding: 40px 10px;
     margin: 20px 0px;
@@ -68,11 +68,17 @@ body{
       margin: 20px 0px;
       font-size:15px ;
       line-height: 30px;
+      color: $color;
+    }
+    .box-title{
+      h3{
+        color:$color
+      }
     }
     .box-btn{
       a{
         text-decoration: none;
-        color: rgb(181, 118, 173);
+        color: $color;
         font-size: 16px;
 
       }
@@ -84,7 +90,7 @@ body{
 
 
 .fa{
-   color:rgb(181, 118, 173);
+   color:$color;
 }
 
 
@@ -104,7 +110,7 @@ body{
     margin-bottom: 20px;
      h2{
        color:$color;
-       font-size: 25px;
+       font-size: 30px;
       }
      p {
        color:$color;
@@ -149,13 +155,13 @@ body{
 }
 
 .nav-menu ul {
-  color:rgb(242, 228, 242 );
+  color:$color;
   list-style: none;
   padding: 0;
 }
 
 .nav-menu a:hover {
-  color:rgb(242, 228, 242 );
+  color:$color;
 }
 
 .barra {
@@ -168,15 +174,15 @@ body{
   bottom: 0;
   cursor: pointer;
   z-index: 1;
-  color: rgb(242, 228, 242 );
+  color: $color;
 }
 
 .barra-home {
-  color: rgb(242, 228, 242 )
+  color: $color;
 }
 
 .close i {
-  color: rgb(242, 228, 242 )
+  color: $color;
 }
 
 
@@ -232,8 +238,10 @@ body{
     transform: translateX(0);
     transition: transform 0s;
     position:fixed;
+    overflow-x: hidden;
     
   }
+
       
   .nav-menu ul {
       display: flex;
@@ -291,6 +299,10 @@ body{
   margin-top: 0px;
   text-align: center;
   align-items: center;
+  h2{
+    font-size: 40px;
+    margin-top: 20px;
+  }
    .ubicacion__mapa {
      width: auto;
     margin-bottom: 50px;
@@ -449,6 +461,19 @@ body{
     top: 2px;
     background-color:black;
     color: $color;
+    .pedido{
+        font-size: 25px;
+        color: $color;
+        border-bottom-width: 2px;
+        border-bottom-color: $color;
+       
+     }
+     .pedidoTexto{
+       color: $color;
+       margin-top: 5px;
+       border-top-color: $color;
+       border-top-width: 3px;
+     }
   
      .far {
       padding: 11px;
@@ -506,6 +531,7 @@ body{
   }
   a{
     text-decoration: none;
+    margin-bottom: 60px;
   h2{
     font-family: "ultra", serif;
     font-size: 30px;
