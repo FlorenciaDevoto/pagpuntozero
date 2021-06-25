@@ -2,11 +2,11 @@
 Punto zero
 
 
-###Caracteristicas
+### Caracteristicas
 Pagina web de Hamburgueseria en Marcos Paz, zona oeste. Esta pagina web esta destinada a la optimizacion de pedidos y a la venta de los productos que ofrecen.
 
 -------------
-##Conformacion
+## Conformacion
 - Cuenta con 6 HTML los cuales siguen un mismo prototipo de maquetacion durante toda la pagina. 
 - Utilización de scss/css utilizados para darle diseño a la pagina; con diferentes tipos de estilos como: paddings, display,hovers, margins y demás.
 - Responsive: tambien cuenta con media queris correspondientes para los distintos dispositivos.
@@ -26,4 +26,4 @@ Espero que les guste y disfruten.
 Florencia Devoto
 
 
-###End
+### Fin
