@@ -31,6 +31,11 @@ body {
       margin-bottom: 40px;
       text-align: justify;
       justify-content: center; }
+      .m .menu .menu__texto h3{
+        font-size: 30px;
+        font-weight: bold;
+        
+      }
 
 /*aca empieza nosotros*/
 .social-box {
@@ -73,6 +78,9 @@ body {
     margin-left: 20px;
     margin-top: 50px;
     margin-bottom: 20px; }
+    .nosotros .nosotros__miTexto .animate__animated .animate__backInLeft{
+      --animation-duration: 1.5s;
+    }
     .nosotros .nosotros__miTexto h2 {
       color: #f2e4f2;
       font-size: 30px; }
@@ -393,14 +401,18 @@ body {
   .menu .menu__delivery a {
     text-decoration: none;
     margin-bottom: 60px; }
-    .menu .menu__delivery a h2 {
+    .menu .menu__delivery a .animate__animated  {
       font-family: "ultra", serif;
-      font-size: 30px;
+      font-size: 40px;
       color: #f2e4f2;
       text-align: center;
       text-decoration: none;
       bottom: 60px; }
+    
+      .menu .menu__delivery a .animate__animated .animate__flipInX {
+        --animation-duration: 3s;
 
+      }
 .carousel {
   background-color: black;
   padding: 10px;
@@ -433,4 +445,3 @@ footer .contenido__footer {
       footer .contenido__footer .footer__redes {
         font-size: 13px; } }
 
-/*responsive pedidos*/

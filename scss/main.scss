@@ -108,6 +108,11 @@ body{
     margin-left: 20px;
     margin-top: 50px;
     margin-bottom: 20px;
+    .animate__animated{
+      .animate__backInLeft{
+        --animate-duration: 2s;
+      }
+    }
      h2{
        color:$color;
        font-size: 30px;
